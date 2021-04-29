@@ -5,7 +5,7 @@ import SearchBox from "./components/searchBox/SearchBox";
 import FavoriteList from "./components/favoriteList/FavoriteList";
 
 function App() {
-  const [movies, setMovies] = useState();
+  const [movies, setMovies] = useState([]);
   const [favMovies, setFavMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
