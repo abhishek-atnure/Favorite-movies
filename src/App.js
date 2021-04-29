@@ -9,16 +9,6 @@ function App() {
   const [favMovies, setFavMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const getMovies = async () => {
-    const URL = `http://www.omdbapi.com/?s=${searchTerm}&apikey=a9c4ae38`;
-
-    const resposne = await fetch(URL);
-    const data = await resposne.json();
-    if (data.Search) {
-      setMovies(data.Search);
-    }
-  };
-
   const addToLocalStorage = (movies) => {
     const stringified = JSON.stringify(movies);
     localStorage.setItem("react_fav_movies", stringified);
@@ -40,6 +30,16 @@ function App() {
   };
 
   useEffect(() => {
+    const getMovies = async () => {
+      const URL = `http://www.omdbapi.com/?s=${searchTerm}&apikey=a9c4ae38`;
+
+      const resposne = await fetch(URL);
+      const data = await resposne.json();
+      if (data.Search) {
+        setMovies(data.Search);
+      }
+    };
+
     getMovies(searchTerm);
   }, [searchTerm]);
 
