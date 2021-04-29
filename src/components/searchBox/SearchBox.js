@@ -1,5 +1,4 @@
 import React from "react";
-import icon from "./searching.png";
 
 export default function SearchBox({ searchTerm, setSearchTerm }) {
   const handleClick = (e) => {

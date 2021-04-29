@@ -1,5 +1,4 @@
 import React from "react";
-import heart from "./heart.png";
 
 function MovieList(props) {
   return (
