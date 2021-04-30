@@ -69,11 +69,3 @@ body {
   border-radius: 6px;
   margin: auto;
 }
-
-.searchbox button {
-  padding: 5px 30px;
-  background: #404757;
-  border: none;
-  color: white;
-  margin: auto 10px;
-}
