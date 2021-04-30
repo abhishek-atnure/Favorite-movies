@@ -48,6 +48,7 @@ function App() {
   };
 
   const addFav = (movie) => {
+    console.log(movie);
     const newFav = favMovies.concat([movie]);
     console.log(newFav);
     setFavMovies(newFav);
