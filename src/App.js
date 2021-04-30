@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { List } from "immutable";
 import Heading from "./components/heading/Heading";
 import MovieList from "./components/movieList/MovieList";
 import SearchBox from "./components/searchBox/SearchBox";
@@ -15,14 +16,10 @@ function App() {
   };
 
   const addFav = (movie) => {
-    // favMovies.push(movie);
-    const newFav = Array.from(favMovies);
-    //const arr = Array.from(favMovies > 0 && favMovies);
-    const newFav2 = [...newFav, movie];
-    console.log(movie);
+    const newFav = [...favMovies, movie];
     console.log(newFav);
-    setFavMovies(newFav2);
-    addToLocalStorage(newFav2);
+    setFavMovies(newFav);
+    addToLocalStorage(newFav);
   };
 
   const removeFav = (movie) => {
