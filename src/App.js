@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { List } from "immutable";
 import Heading from "./components/heading/Heading";
 import MovieList from "./components/movieList/MovieList";
 import SearchBox from "./components/searchBox/SearchBox";
