@@ -16,7 +16,7 @@ function App() {
 
   const addFav = (movie) => {
     // favMovies.push(movie);
-    const newFav = [...Array.from(favMovies), movie];
+    const newFav = [...Array.from(favMovies && favMovies), movie];
     //const arr = Array.from(favMovies > 0 && favMovies);
     console.log(movie);
     console.log(newFav);
