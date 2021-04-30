@@ -3,7 +3,8 @@ import React from "react";
 function MovieList({ movies, handleFav }) {
   return (
     <div className="movie-list">
-      {movies.length > 0 &&
+      {movies &&
+        movies.length > 0 &&
         movies.map((movie) => (
           <div className="movie">
             <img src={movie.Poster} alt=""></img>
