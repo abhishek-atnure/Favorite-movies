@@ -48,7 +48,7 @@ function App() {
   };
 
   const addFav = (movie) => {
-    const newFav = [...favMovies, movie];
+    const newFav = favMovies.concat([movie]);
     console.log(newFav);
     setFavMovies(newFav);
     addToLocalStorage(newFav);
