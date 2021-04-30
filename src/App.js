@@ -15,7 +15,7 @@ function App() {
   };
 
   const addFav = (movie) => {
-    if (favMovies.length === 0) {
+    if (favMovies.length) {
       setFavMovies(movie);
       addToLocalStorage(movie);
     }
