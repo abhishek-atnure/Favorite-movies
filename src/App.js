@@ -78,7 +78,9 @@ function App() {
 
   useEffect(() => {
     const getItem = JSON.parse(localStorage.getItem("react_fav_movies"));
-    setFavMovies(getItem);
+    if (getItem) {
+      setFavMovies(getItem);
+    }
   }, []);
 
   return (
