@@ -6,7 +6,7 @@ function MovieList({ movies, handleFav }) {
       {movies &&
         movies.length > 0 &&
         movies.map((movie) => (
-          <div className="movie">
+          <div className="movie" key={movie.imdbID}>
             <img src={movie.Poster} alt=""></img>
             <h3>{movie.Title}</h3>
             <span>{movie.Year}</span>
