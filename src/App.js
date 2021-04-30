@@ -15,12 +15,10 @@ function App() {
   };
 
   const addFav = (movie) => {
-    if (favMovies) {
-      const newFav = [...favMovies, movie];
-      console.log(newFav);
-      setFavMovies(newFav);
-      addToLocalStorage(newFav);
-    }
+    const newFav = [...favMovies, movie];
+    console.log(newFav);
+    setFavMovies(newFav);
+    addToLocalStorage(newFav);
   };
 
   const removeFav = (movie) => {
