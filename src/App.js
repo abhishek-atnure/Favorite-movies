@@ -15,10 +15,12 @@ function App() {
   };
 
   const addFav = (movie) => {
-    favMovies.push(movie);
-    const newFav = [...favMovies];
+    // favMovies.push(movie);
+    //const newFav = [...favMovies];
+    const arr = Array.from(favMovies);
+    const newFav = [...arr, movie];
     console.log(movie);
-    console.log(favMovies);
+    console.log(newFav);
     setFavMovies(newFav);
     addToLocalStorage(newFav);
   };
